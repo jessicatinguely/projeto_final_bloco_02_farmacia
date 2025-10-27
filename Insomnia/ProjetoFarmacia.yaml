@@ -1,0 +1,545 @@
+type: collection.insomnia.rest/5.0
+name: Farmacia
+meta:
+  id: wrk_13e73f5616bc45fa968b162ed2a6eca3
+  created: 1761573139461
+  modified: 1761573161676
+  description: ""
+collection:
+  - name: Farmácia
+    meta:
+      id: fld_210e283442e34603b053f130fa76f61a
+      created: 1714609683123
+      modified: 1761573176279
+      sortKey: -1680422159664
+      description: ""
+    children:
+      - name: Produtos
+        meta:
+          id: fld_54d965dd3b4b4a6c842399fcc02b3bc4
+          created: 1714609683126
+          modified: 1714609760794
+          sortKey: -1693023615572
+          description: ""
+        children:
+          - url: http://localhost:8080/produtos/1
+            name: Deletar Produto
+            meta:
+              id: req_6c542d9b005d4913863503ead2a8d38d
+              created: 1714609683131
+              modified: 1761578054210
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159585
+            method: DELETE
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGVtYWlsLmNvbS5iciIsIm5iZiI6MTY5NjUyNjIxNywiZXhwIjoxNjk2NTI5ODE3LCJpYXQiOjE2OTY1MjYyMTd9._YZvAXPMoq9DHUKQsVgADa3aauyLvYa0tC6lB5wnn04
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos
+            name: Editar Produto
+            meta:
+              id: req_bfa3a38fb8ec4938a31c637f2479b27f
+              created: 1714609683136
+              modified: 1761577990685
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159591
+            method: PUT
+            body:
+              mimeType: application/json
+              text: >-
+                	{
+                		"id": 1,
+                		"nome": "Amoxicilina 500mg",
+                		"descricao": "Antibiótico indicado para o tratamento de infecções bacterianas.",
+                		"preco": 39.90,
+                		"quantidade": 80,
+                		"laboratorio": "EMS",
+                		"foto": "https://ik.imagekit.io/hnkqnvn7cu/produto_04.png?updatedAt=1761576493156",
+                		"receitaObrigatoria": true,
+                		"categoria": {
+                			"id": 3,
+                			"tipo": "Medicamentos"
+                		}
+                	}
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20uYnIiLCJpYXQiOjE2OTc5ODk4NTgsImV4cCI6MTY5Nzk5MzQ1OH0.zlEkNIgzz6Ia4yMJ75hKAAeRaOw6wnohD7NrUlR9yt8
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos
+            name: Cadastrar Produto
+            meta:
+              id: req_164148f74e6b45e4814335eac1e782b6
+              created: 1714609683140
+              modified: 1761578189174
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159723
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "nome": "Vitamina C 1g efervescente",
+                  "descricao": "Suplemento vitamínico com ação antioxidante.",
+                  "preco": 22.90,
+                  "quantidade": 100,
+                  "laboratorio": "Sanofi",
+                  "foto": "https://exemplo.com/imagens/vitamina-c.jpg",
+                  "receitaObrigatoria": false,
+                  "categoria": {
+                    "id": 3
+                  }
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20uYnIiLCJpYXQiOjE2OTg0Njk5MjIsImV4cCI6MTY5ODQ3MzUyMn0._ZHSIMFcHx44sqXbHfUTwsYrxkg_9U1H5c75RKuOBMVCBjmrayH5gS2b1Lr-iZeW
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos/1
+            name: Lista Produto por Id
+            meta:
+              id: req_a4b6ab5f8b234bf3b618fc6c02fbf5cc
+              created: 1714609683145
+              modified: 1761562942702
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159615.5
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGVtYWlsLmNvbS5iciIsIm5iZiI6MTY5NjUyNjIxNywiZXhwIjoxNjk2NTI5ODE3LCJpYXQiOjE2OTY1MjYyMTd9._YZvAXPMoq9DHUKQsVgADa3aauyLvYa0tC6lB5wnn04
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos/nome/Amoxicilina
+            name: Lista Produto por nome
+            meta:
+              id: req_039d4343949e468fae55e918b64d836a
+              created: 1714609683149
+              modified: 1761578038280
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159608
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGVtYWlsLmNvbS5iciIsIm5iZiI6MTY5NjUyNjIxNywiZXhwIjoxNjk2NTI5ODE3LCJpYXQiOjE2OTY1MjYyMTd9._YZvAXPMoq9DHUKQsVgADa3aauyLvYa0tC6lB5wnn04
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos
+            name: Lista todos os Produtos
+            meta:
+              id: req_26f3f83e030643368831f4079850cf10
+              created: 1714609683154
+              modified: 1761562938454
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159623
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20uYnIiLCJpYXQiOjE2OTg0Njk5MjIsImV4cCI6MTY5ODQ3MzUyMn0._ZHSIMFcHx44sqXbHfUTwsYrxkg_9U1H5c75RKuOBMVCBjmrayH5gS2b1Lr-iZeW
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/produtos/receita/true
+            name: Listas Produto Receita Obrigatória
+            meta:
+              id: req_ca588153642346c69f4b327b84d9f0cc
+              created: 1761578129709
+              modified: 1761578474682
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159611.75
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGVtYWlsLmNvbS5iciIsIm5iZiI6MTY5NjUyNjIxNywiZXhwIjoxNjk2NTI5ODE3LCJpYXQiOjE2OTY1MjYyMTd9._YZvAXPMoq9DHUKQsVgADa3aauyLvYa0tC6lB5wnn04
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Categorias
+        meta:
+          id: fld_5b2482072eac4d339128691fcff401e0
+          created: 1714609752895
+          modified: 1714609765903
+          sortKey: -1693023615622
+          description: ""
+        children:
+          - url: http://localhost:8080/categorias
+            name: Listar Categorias
+            meta:
+              id: req_0eeac30f5b02405dbf00dd3a2871e937
+              created: 1714609774629
+              modified: 1761562913475
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888672
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/1
+            name: Listar Categoria por Id
+            meta:
+              id: req_bebd7e63baeb44bcb0ef6ed6f7403bb6
+              created: 1714609824886
+              modified: 1761562917341
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888622
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/tipo/Literatura
+            name: Listar Categorias por Tipo
+            meta:
+              id: req_c7f7d52bcbc94dee95827884e452e396
+              created: 1714609854505
+              modified: 1761562921378
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888597
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias
+            name: Cadastrar Categoria
+            meta:
+              id: req_71bac8cb1b2240a1b3fff1650867b067
+              created: 1714609888572
+              modified: 1761573298532
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888772
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"tipo": "Medicamentos"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias
+            name: Atualizar Categoria
+            meta:
+              id: req_227c9c4136d7466cb6d18d5ebf3d24a6
+              created: 1714609941997
+              modified: 1761573334231
+              isPrivate: false
+              description: ""
+              sortKey: -1714609831600.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 1,
+                	"tipo": "Cosméticos"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/2
+            name: Deletar Categoria
+            meta:
+              id: req_450745bf025a4f9f813457ce64ec7171
+              created: 1714610558467
+              modified: 1761562933409
+              isPrivate: false
+              description: ""
+              sortKey: -1714219346694
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Usuário
+        meta:
+          id: fld_c039047605fb44a2a4fc8439c6750690
+          created: 1761584935118
+          modified: 1761584937900
+          sortKey: -1693023615722
+          description: ""
+        children:
+          - url: http://localhost:8080/usuarios/logar
+            name: Autenticar Usuário
+            meta:
+              id: req_eddd09b6022947daa12e2b1d812d1be8
+              created: 1761584945229
+              modified: 1761585366928
+              isPrivate: false
+              description: ""
+              sortKey: -1761584945229
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"usuario": "admin@email.com.br",
+                	"senha": "admin123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/cadastrar
+            name: Cadastrar Usuário
+            meta:
+              id: req_140a36bdc97d45a3a5e8d0e84af61dc6
+              created: 1761584961314
+              modified: 1761585224910
+              isPrivate: false
+              description: ""
+              sortKey: -1761584961314
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "Administrador",
+                	"usuario" : "admin@email.com.br",
+                	"senha": "admin123",
+                	"foto":"link"
+
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/all
+            name: Consultar todos os Usuários
+            meta:
+              id: req_2bbc10f270134184ac0de1a5c8df1a9f
+              created: 1761585415425
+              modified: 1761585590165
+              isPrivate: false
+              description: ""
+              sortKey: -1761585415425
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d8ae35e622ce4625996c15535d148347
+              - id: pair_0a72e502b346443cb7b3ccfb2c615961
+                name: Authorization
+                value: "{% response 'body', 'req_eddd09b6022947daa12e2b1d812d1be8',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/1
+            name: Consultar Usuário por Id
+            meta:
+              id: req_251c253b4b93422aa2fb50c9da1b5d47
+              created: 1761585618792
+              modified: 1761585641697
+              isPrivate: false
+              description: ""
+              sortKey: -1761585188369.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d8ae35e622ce4625996c15535d148347
+              - id: pair_0a72e502b346443cb7b3ccfb2c615961
+                name: Authorization
+                value: "{% response 'body', 'req_eddd09b6022947daa12e2b1d812d1be8',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/atualizar
+            name: Atualizar Usuário
+            meta:
+              id: req_cb0ff0c0111e4e07b836067300a6e94d
+              created: 1761585663055
+              modified: 1761585847335
+              isPrivate: false
+              description: ""
+              sortKey: -1761585301897.25
+            method: PUT
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"id": 1,
+                	"nome": "Administrador",
+                	"usuario" : "admin@email.com.br",
+                	"senha": "admin123",
+                	"foto":"https://ik.imagekit.io/hnkqnvn7cu/sample-video.mp4?updatedAt=1760731638050"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d8ae35e622ce4625996c15535d148347
+              - id: pair_0a72e502b346443cb7b3ccfb2c615961
+                name: Authorization
+                value: "{% response 'body', 'req_eddd09b6022947daa12e2b1d812d1be8',
+                  'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0fad17eb9f474c4fa652950a23a027f2
+    created: 1714609683115
+    modified: 1714609683115
+environments:
+  name: Base Environment
+  meta:
+    id: env_d7be866617fd4d62aaa2026bf43b080e
+    created: 1714609683102
+    modified: 1714609683102
+    isPrivate: false
